@@ -61,6 +61,15 @@ function pageStudy(req,res){
     return res.render("study.html",{ proffys , filters ,subjects, weekdays})
 
 }
+
+
+
+function pageAlteracaodados(req,res){
+    const filters = req.query
+    return res.render("alteracaodados.html",{ proffys , filters ,subjects, weekdays})
+
+}
+
 function pageGiveClasses(req,res){
     const data = req.query
 
@@ -96,5 +105,6 @@ server
 .get("/",pageLanding)
 .get("/study",pageStudy)
 .get("/give-classes",pageGiveClasses)
+.get("/alteracaodados",pageAlteracaodados)
 
 .listen(5000)

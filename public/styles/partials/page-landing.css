@@ -63,7 +63,21 @@
 
 }
 
+
+
 .buttons-container a.study:hover{
+    background: var(--color-primary-light);
+
+}
+
+
+.buttons-container a.study:hover{
+    background: var(--color-primary-light);
+
+}
+
+
+.buttons-container a.alteracaodados:hover{
     background: var(--color-primary-light);
 
 }
