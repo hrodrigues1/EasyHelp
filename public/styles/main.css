@@ -17,6 +17,7 @@
     --color-line-in-white: #E6E6F0;
     --color-input-background: #F8F8FC;
     --color-button-text: #FFFFFF;
+    --color-button-cadastro: #8c00ff;
     --color-box-base: #FFFFFF;
     --color-box-footer: #FAFAFC;
     --color-small-info: #C1BCCC;
@@ -55,7 +56,8 @@ textarea{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}   
+}
+   
  
 @media (min-width: 700px){
     :root{
