@@ -59,6 +59,7 @@ function pageLanding(req,res){
 
 function pageStudy(req,res){
     const filters = req.query
+    //console.log(req.query)
     return res.render("study.html",{ proffys , filters ,subjects, weekdays})
 
 }
