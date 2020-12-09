@@ -1,9 +1,9 @@
 const proffys = [
     {   name:"Rodrigo Aguiar", 
-        avatar :"https://avatars2.githubusercontent.com/u/2254731?s=460&amp;u=0ba16a79456c2f250e7579cb388fa18c5c2d7d65&amp;v=4", 
+        avatar :"https://avatars2.githubusercontent.com/u/74689679?s=400&u=22a848503374fad225ab32b587b9083ca24c3a86&v=4", 
         whatsapp:"662337766", 
-        bio:"Entusiasta das melhores tecnologias de química avançada.<br><br>Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.", 
-        subject:"Instalação de Impressoras", 
+        bio:"10 anos de experiência em infra, atendimento rápido e satisafação garantida", 
+        subject:"Ajuda com Impressoras", 
         cost: "25", 
         weekday: [
             0
@@ -14,8 +14,8 @@ const proffys = [
     {   name:"Henrique Rodrigues", 
         avatar :"https://avatars1.githubusercontent.com/u/55166332?s=460&u=1fc9f988bb29e81c38322d51fd7f1501e558bd21&v=4", 
         whatsapp:"662337766", 
-        bio:"Entusiasta das melhores tecnologias de química avançada.<br><br>Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.", 
-        subject:" Acesso Remoto - Instalação de Programas", 
+        bio:"Entusiasta das melhores tecnologias, tenho boas referências atuando como técnico em informática...", 
+        subject:"Ajuda com Software", 
         cost: "80", 
         weekday: [
             0
@@ -32,6 +32,7 @@ const subjects = [
     "Ajuda com Webcam",
     "Formatação",
     "Programação",
+    "Educação",
 ]
 
 const weekdays = [
