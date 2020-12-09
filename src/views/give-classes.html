@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt_br">
 <head>
@@ -32,23 +31,22 @@
                     <p>O primeiro passo, é preencher esse formulário de inscrição</p>
             </div>
         </header>
-    
 
         <main>
-            <form action=""id="create-class">
+            <form action="/save-classes" id="create-class" method="POST">
                 <fieldset>
                     <legend>Seus dados</legend>
                     <div class="input-block">
-                        <label for="name">Nome Completo</label>
+                        <label for="name">Nome completo</label>
                         <input name="name" id="name" required>
                     </div>
                     <div class="input-block">
-                        <label for="avatar">Link da sua foto<small>(comece com https://)</small></label>
-                        <input name="avatar" id="avatar"type="url"required>
+                        <label for="avatar">Link da sua foto <small>(comece com https://)</small></label>
+                        <input name="avatar" id="avatar" type="url" required>
                     </div>
                     <div class="input-block">
-                        <label for="whatsapp">Whatsapp<small>(somente números)</small></label>
-                        <input name="whatsapp" id="whatsapp" type="number"required>
+                        <label for="whatsapp">WhatsApp <small>(somente números)</small></label>
+                        <input name="whatsapp" id="whatsapp" type="number" required>
                     </div>
                     <div class="textarea-block">
                         <label for="bio">Biografia</label>
@@ -61,11 +59,12 @@
                         <label for="subject">Tipo</label>
                         <select name="subject" id="subject" required>
                             <option value="">Selecione uma opção</option>
-                            {%for subject in subjects %}
+                            {% for subject in subjects %}
                             <option value="{{loop.index}}">
-                                {{subject}}
+                                {{ subject }}
                             </option>
-                            {%endfor%}
+                            {% endfor %}
+                            
                         </select>
 
                     </div>
@@ -74,7 +73,7 @@
                         <label for="cost">Custo da sua hora
                              <small>(R$)</small>
                         </label>
-                        <input name="cost"  id="cost" type="number"required>
+                        <input name="cost" id="cost" type="number"required>
                     </div>
                 </fieldset>
                 <fieldset id="schedule-items">
@@ -84,13 +83,13 @@
                     <div class="schedule-item">
                         <div class="select-block">
                             <label for="weekday">Dia da semana</label>
-                            <select name="weekday[]" id="weekday" required>
+                            <select name="weekday[]" required>
                                 <option value="">Selecione uma opção</option>
-                                {%for weekday in weekdays %}
-                                <option value="{{loop.index0}}" >
-                                    {{weekday}}
+                                {% for weekday in weekdays %}
+                                <option value="{{  loop.index0 }}">
+                                    {{ weekday }}
                                 </option>
-                                {%endfor%}
+                                {% endfor %}
                             </select>
                         </div>
                         <div class="input-block">
@@ -98,7 +97,7 @@
                             <input type="time" name="time_from[]" required>
                         </div>
                         <div class="input-block">
-                            <label for="time_from">Até</label>
+                            <label for="time_to">Até</label>
                             <input type="time" name="time_to[]" required>
                         </div>
                     </div>
@@ -120,8 +119,7 @@
             <footer>
                 <p>
                     <img src="/images/icons/warning.svg" alt="Aviso importante">
-                    Importante! <br>
-                    Preencha todos os dados
+                    Importante! <br> Preencha todos os dados
                 </p>
                 <button type="submit" form="create-class">Salvar cadastro</button>
             </footer>
