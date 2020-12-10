@@ -1,30 +1,23 @@
 
-const express = require('express')
-const server = express()
+const express = require('express');
+const server = express();
 
-const { 
-    pageLanding, 
-    pageStudy,
-    pageAlteracaodados, 
-    pageGiveClasses, 
-    saveClasses 
-} = require('./pages')
+const { pageLanding, pageStudy,pageAlteracaodados, pageGiveClasses, saveClasses } = require('./pages')
 
-const nunjucks = require('nunjucks')
-//configurar nunjucks
-nunjucks.configure('src/views',{
+const nunjucks = require('nunjucks');
+nunjucks.configure('src/views', {
     express: server,
     noCache: true,
     
 })
 
-
 server
+.use(express.urlencoded({ extended: true }))
 .use(express.static("public"))
-.get("/",pageLanding)
-.get("/study",pageStudy)
-.get("/give-classes",pageGiveClasses)
-.get("/alteracaodados",pageAlteracaodados)
+.get("/", pageLanding)
+.get("/study", pageStudy)
+.get("/give-classes", pageGiveClasses)
+.get("/alteracaodados", pageAlteracaodados)
 .post("/save-classes", saveClasses)
 
 .listen(5000)
